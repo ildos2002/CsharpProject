@@ -1,1 +1,1 @@
-Для запуска нужен Devart ODBC Driver for PostgreSQL. (https://www.devart.com/odbc/postgresql/download.html). Бэкап БД PostgreSQL.
+Для запуска нужен Devart ODBC Driver for PostgreSQL настройка в (Панель управления->администрирование->odbc Data Source->добавить. (https://www.devart.com/odbc/postgresql/download.html). Бэкап БД PostgreSQL.
