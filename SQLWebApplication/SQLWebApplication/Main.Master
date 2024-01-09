@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="SQLWebApplication.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        /* Пример установки расстояния 20px между ссылками */
+        td > HyperLink{
+            margin-right: 40px; /* Устанавливаем правый отступ между ссылками */
+        }
+    </style>
+    <style>
+    .container {
+        width: 80%; /* Ширина контейнера 80% от ширины родительского элемента */
+        max-width: 1200px; /* Максимальная ширина контейнера - 1200px */
+        margin: 0 auto; /* Центрирование контейнера на странице */
+        padding: 20px; /* Внутренний отступ для контента внутри контейнера */
+        box-sizing: border-box; /* Учитываем padding внутри ширины контейнера (чтобы padding не увеличивал ширину контейнера) */
+        /*border: 1px solid #ddd; Пояс для контейнера */
+        overflow: hidden; /* При необходимости скрыть содержимое, выходящее за пределы контейнера */
+                background-color: white;
+    }
+</style>
+        <style>
+    .centered-container {
+         max-width: 1200px;
+    width: 80%; /* Ширина 70% окна браузера */
+    margin: 0 auto;
+                background-color: white;
+    /* Автоматическое выравнивание по центру */
+}
+    </style>
+    <style>
+    .centered {
+        text-align: center; /* центрируем содержимое внутри контейнера */
+    }
+</style>
+     <style>
+    .bordering {
+    border: 1px solid #ddd
+        }
+</style>
+    <style>
+    .paddfordata {
+   margin-left: 45px;
+        }
+    .background{
+        background-image: none;
+    }
+   body{
+        background-image: url("Picture/1.jpg");
+        background-size: cover;
+
+    }
+</style>
+    <style>
+        .centeredGrid{
+            margin:auto;
+        }
+    </style>
+    <style>
+        .margintextbox{
+            margin-left:10px;
+             margin-right:10px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <table>
+                <tr>
+                    <td> <img src="Picture/rec.png" style="height: 315px"></td>
+                    <td> <img src="Picture/phone.jpg" style="height: 315px"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container centered">
+            <b>Наши телефоны: +7(993)132-42-42; +7(913)113-43-43 Наш адрес: г. Нью-Йорк, ул. Уолл-стрит, 11</b>
+        </div>
+         <div class="container centered" border: 1px solid #ddd>
+            <table>
+                <tr>
+                    <td style="padding-right: 85px; padding-left:85px;">
+                        <asp:HyperLink ID="MainPage" runat="server" NavigateUrl="~/default.aspx">Главная</asp:HyperLink>
+                    </td>
+                    <td style="padding-right: 85px; padding-left: 85px;">
+                        <asp:HyperLink ID="Subscribers" runat="server" NavigateUrl="~/Subscribers.aspx">Абоненты</asp:HyperLink>
+                    </td>
+                    <td style="padding-right: 85px; padding-left: 85px;">
+                        <asp:HyperLink ID="Cities" runat="server" NavigateUrl="~/Cities.aspx">Города</asp:HyperLink>
+                    </td>
+                    <td style="padding-right: 85px; padding-left: 85px;">
+                        <asp:HyperLink ID="Conversations" runat="server" NavigateUrl="~/LoginPage.aspx">Переговоры</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
